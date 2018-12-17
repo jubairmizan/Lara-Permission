@@ -1,0 +1,19 @@
+{
+    "name": "jubairmizan/lara-permission",
+    "description": "Associate users with permissions and roles",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jubair Mizan",
+            "email": "jubairmizan@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jubairmizan\\LaraPermission\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}

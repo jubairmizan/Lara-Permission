@@ -6,10 +6,26 @@
 [![composer.lock](https://poser.pugx.org/jubairmizan/lara-permission/composerlock)](https://packagist.org/packages/jubairmizan/lara-permission)
 
 
-**Step 1 **
+**Installing Library on your projects**
+
 composer require jubairmizan/lara-permission
 
-**Step 2**
-Add **providers** on you App\Config.php 
+**Add Providers**
 
-Jubairmizan\LaraPermission\LaraPermissionServiceProvider::class,
+Add `providers` on projects App\Config.php 
+
+  `Jubairmizan\LaraPermission\LaraPermissionServiceProvider::class`
+  
+After add the providers run `composer dump-autoload`
+
+**Migration**
+
+Migrate the Library dependencies Table 
+
+`php artisan migrate --path=database/migrations/lara_permission`
+
+**Seeding**
+
+Seed the Library dummy record to table
+
+`php artisan db:seed --class=LaraPermissionRolesTableSeeder`

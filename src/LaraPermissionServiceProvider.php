@@ -18,7 +18,7 @@ class LaraPermissionServiceProvider extends ServiceProvider{
 		/**
 		 * If your package contains database migrations, you may use the loadMigrationsFrom method to inform Laravel how to load them. The loadMigrationsFrom method accepts the path to your package's migrations as its only argument:
 		 */
-		$this->loadMigrationsFrom(__DIR__.'/database/migrations');
+		$this->loadMigrationsFrom(__DIR__.'/database/migrations/lara-permission');
 	}
 
 	/**

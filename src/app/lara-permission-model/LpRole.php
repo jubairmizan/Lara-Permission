@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class LaraPermissionRoleUser extends Model
+class LpRole extends Model
 {
     //
 }

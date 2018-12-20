@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateLaraPermissionRolesTable extends Migration
 {
@@ -13,7 +14,7 @@ class CreateLaraPermissionRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('lara_permission_roles', function (Blueprint $table) {
+        Schema::create('lp_roles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',100)->comment('Roles Name of Assigned User');
             $table->text('description')->nullable()->comment('What kind of responsibility belongs to this roles');
@@ -23,6 +24,8 @@ class CreateLaraPermissionRolesTable extends Migration
             $table->unsignedInteger('updated_by',false)->nullable();
             $table->timestamps();
         });
+
+        // DB::unprepared(file_get_contents(__DIR__."/../../seeds/lara-permission/RoleSeeder.php"));
     }
 
     /**
@@ -32,6 +35,6 @@ class CreateLaraPermissionRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lara_permission_roles');
+        Schema::dropIfExists('lp_roles');
     }
 }

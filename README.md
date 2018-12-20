@@ -8,7 +8,7 @@
 
 **Installing Library on your projects**
 
-composer require jubairmizan/lara-permission
+`composer require jubairmizan/lara-permission`
 
 **Add Providers**
 
